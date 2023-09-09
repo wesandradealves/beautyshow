@@ -1,0 +1,38 @@
+
+@keyframes news {
+  0% { transform: translate3d(-100%, 0, 0); }
+  100% { transform: translate3d(0%, 0, 0); }
+}  
+  
+.breakingnews {
+  &:not(:last-child) {
+    border-bottom: 2px black solid;
+  }
+  width: 100%;
+  &-group {
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    width: 100%;
+  }
+  background-color: white;
+  color: black;
+  [class*="container"] {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  p {
+    color: inherit !important;
+    white-space: nowrap;
+    animation: news 20s infinite linear;
+    * {
+      // color: inherit !important;
+      padding: 0 12px;
+      span {
+        color: color(primary, base) !important;
+      }
+    }
+  }
+  &.reverse p {
+    animation-direction: reverse;
+  }
+}

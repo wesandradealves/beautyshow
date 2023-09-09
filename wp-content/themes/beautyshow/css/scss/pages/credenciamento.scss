@@ -1,0 +1,164 @@
+.credenciamento {
+    &.section {
+        iframe {
+            width: 100%;
+            height: 320px;
+            @media screen and (min-width: $screen-md-min) {
+                height: 530px;
+            }
+            max-width: 530px;
+            border: 2px black solid;
+            display: block;
+            outline: 2px black solid;
+            box-shadow: 8px 8px 0px 0px color(primary, base);            
+        }
+        .info {
+            margin-top: 48px;
+            @media screen and (min-width: $screen-md-min) {
+                margin-top: 0;
+            }            
+            > * {
+                &:not(:last-child) {
+                    margin-bottom: 48px;
+                }
+                max-width: 512px;
+                .title {
+                    @include toRem(font-size, 24);  
+                    font-weight: bold; 
+                    text-shadow: 3px 3px 0 color(secondary, base); 
+                }
+                .text {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+.por-que-participar {
+    background-color: color(secondary, base);
+    .container {
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -77%;
+            @media screen and (min-width: $screen-lg-min) {
+                left: calc(-100% + 185px);
+            }
+            border-right: 2px black solid;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: color(blue, base)
+        }       
+        > * {
+            position: relative;
+            z-index: 2;
+        }  
+        .list {
+            .item {
+                .inner {
+                    height: 100%;
+                    background-color: white;
+                    border: 2px black solid;
+                    box-shadow: 8px 8px 0px 0px #000000;     
+                    padding: 24px 26px;           
+                    .title {
+
+                    }   
+                    .text {
+                        font-weight: 300;
+                    }   
+                }
+            }
+        }
+    }
+}
+
+.faq {
+    background-color: color(primary, light);
+    .faq-list {
+        .item {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            .inner {
+                border: 2px black solid;
+                box-shadow: 2px 2px 0px 0px #000000;
+                background-color: white;
+                .title,
+                .text {
+                    padding: 24px;
+                }
+                .title {
+                    border-bottom: 2px black solid;
+                    cursor: pointer;
+                    position: relative;
+                    &.on {
+                        [class*="fa-"] {
+                            background-color: color(primary, base);
+                            &::after,
+                            &::before {
+                                background-color: white;
+                                color: color(primary, base);
+                            }
+                        }
+                    }
+                    [class*="fa-"] {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 69px;
+                        border-left: 2px black solid;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: color(secondary, base);
+                        &::after,
+                        &::before {
+                            height: 18px;
+                            width: 18px;
+                            background-color: black;
+                            border-radius: 5px;
+                            @include toRem(font-size, 16);
+                            color: color(secondary, base);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;    
+                            position: relative;
+                        }
+                    }
+                }
+                .text {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .container {
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -77%;
+            @media screen and (min-width: $screen-lg-min) {
+                left: calc(-100% + 185px);
+            }
+            border-right: 2px black solid;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: color(secondary, base)
+        }       
+        > * {
+            position: relative;
+            z-index: 2;
+        }  
+    }
+}

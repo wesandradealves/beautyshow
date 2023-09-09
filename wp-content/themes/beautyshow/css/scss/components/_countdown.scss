@@ -1,0 +1,56 @@
+.countdown {
+    > .d-flex {
+        > * {
+            @include toRem(font-size, 32);
+            text-transform: uppercase;
+            width: 108px;
+            padding: 7px 9px;
+            @media screen and (min-width: $screen-sm-min) {
+                padding: 20px;
+                @media screen and (min-width: $screen-md-min) {
+                    height: 96px;
+                    padding: 0;
+                    @media screen and (min-width: $screen-lg-min) {
+                        @include toRem(font-size, 40);
+                    }
+                }
+            }
+
+            border: 2px black solid;
+            box-shadow: 8px 8px 0px 0px #000000;
+            background-color: white;
+            color: color(primary, base);
+            &.mes-ano {
+                color: black;
+                background-color: color(secondary, base);
+                span {
+                    line-height: 1 !important;
+                    &:last-child:not(:only-of-type) {
+                        font-weight: 500;
+                        @include toRem(font-size, 20);
+                    }
+                }
+            }
+            &:nth-child(2) {
+                background-color: color(primary, base);
+                color: white;
+            }
+            span {
+                font-weight: bold;
+                &:only-of-type,
+                &:first-child {
+                    line-height: 1.5;
+                }
+                &:only-of-type {
+                    @include toRem(font-size, 32);
+                    @media screen and (min-width: $screen-lg-min) {
+                        @include toRem(font-size, 40);
+                    }
+                }
+                &:last-child:not(:only-of-type) {
+                    @include toRem(font-size, 14);
+                }
+            }
+        }
+    }
+}

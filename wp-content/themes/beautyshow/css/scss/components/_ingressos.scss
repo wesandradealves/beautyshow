@@ -1,0 +1,53 @@
+.ingressos {
+    position: relative;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        content: '';
+    }
+    &::before {
+        left: 0;
+        background: url(img/vector-4.png) center right / cover no-repeat color(primary, base);
+    }
+    &::after {
+        right: 0;
+        background-color: color(blue, base);
+    }
+    [class*="container"] {
+        max-width: 70%;
+        flex: 0 0 auto;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        @media screen and (min-width: $screen-lg-min) {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        background-color: color(primary, light);
+        position: relative;
+        z-index: 2;
+        border-left: 2px black solid;
+        border-right: 2px black solid;
+        @for $i from 1 through 3 {
+            h#{$i} {
+                @include toRem(font-size, 32);
+                color: color(primary, light);
+                text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 3px 3px 0 color(secondary, base); 
+                font-weight: bold       
+            }
+        }           
+        p {
+            @include toRem(font-size, 14);
+            font-weight: 300;
+            @media screen and (min-width: $screen-lg-min) {
+                max-width: 552px;
+            }
+        } 
+    }
+}

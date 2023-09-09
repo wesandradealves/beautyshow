@@ -1,0 +1,43 @@
+.error404 {
+    #primary {
+        background: color(primary, 'base');
+        color: white;
+        font-weight: 800;
+        position: relative;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .7;
+            content: '';
+            background: url(img/vector-3.png) center center / cover no-repeat;
+        }
+        h2 {
+            @include toRem(font-size, 120);
+            text-shadow:
+            2px 2px 0 black,
+            4px 4px 0 color(secondary, base);            
+        }
+        h3 {
+            @include toRem(font-size, 32);
+            text-shadow:
+            2px 2px 0 black,
+            3px 3px 0 color(secondary, base);              
+        }
+        p {
+            @include toRem(font-size, 14);
+            font-weight: normal;
+        }
+        .btn {
+            margin-top: 36px;
+        }
+        .container {
+            padding-top: 160px;
+            padding-bottom: 160px;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.footer {
+    background-color: color(primary, base);
+    color: white;
+    border-top: 2px black solid;
+    .logo {
+        margin-bottom: 48px;
+        img {
+            height: 70px;
+        }
+    }
+    .container {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        .navigation {
+            .nav-item {
+                .nav-link {
+                    color: inherit;
+                    &:hover {
+                        color: color(secondary, base);
+                    }
+                }                    
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                    @media screen and (min-width: $screen-lg-min) {
+                        margin-right: 28px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }    
+        .social-networks {
+            margin: 48px auto;
+            li {
+                &:not(:last-child) {
+                    margin-right: 12px;
+                }
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+                    box-shadow: 2px 2px 0px 0px #000000;
+                    color: color(primary, base);
+                    width: 32px;
+                    height: 32px;
+                    @include toRem(font-size, 17);
+                }
+            }
+        }    
+    }
+}

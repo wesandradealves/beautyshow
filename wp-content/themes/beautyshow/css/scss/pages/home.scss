@@ -1,0 +1,162 @@
+.home {
+    .expositores {
+        position: relative;
+        .container {
+            z-index: 2;
+            position: relative;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .2;
+            z-index: 1;
+            content: '';
+            background: url(img/vector-5.png) center center / cover no-repeat;
+        }
+        &-list {
+            .item {
+                @media screen and (min-width: $screen-lg-min) {
+                    width: 140px;
+                }
+                height: 100px;
+                .inner {
+                    box-shadow: 4px 4px 0px 0px #000000;
+                }
+            }
+        }
+    }
+    .destaques {
+        .section-title {
+            padding-bottom: 41px;
+            @media screen and (min-width: $screen-lg-min) {
+                padding-bottom: 122px;
+            }
+            margin-bottom: 0;
+        }
+        &-slide {
+            @media screen and (min-width: $screen-lg-min) {
+                top: -50px;
+            }
+            z-index: 10;
+            position: relative;
+        }
+        background: url(img/vector-5.png) center center / cover no-repeat color(blue, base);
+        .slider-wrapper {
+            background: url(img/vector-3.png) center center / cover no-repeat color(primary, base);
+            border-top: 2px black solid;
+            .container {
+                padding-bottom: 40px;
+            }
+        }
+        .item {
+            img {
+                height: 220px;
+                object-fit: cover;
+                width: 100%;
+                border: 1px black solid;
+                box-shadow: 8px 8px 0px 0px #000000;   
+            }
+            .title {
+                @include toRem(font-size, 24);
+                color: white;
+                text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000, 3px 3px 0 color(secondary, base); 
+                font-weight: bold;
+                a {
+                    color: inherit;
+                }  
+            }
+        }
+        > .container {
+            position: relative;
+            padding-bottom: 0;
+            > * {
+                position: relative;
+                z-index: 2;
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -77%;
+                @media screen and (min-width: $screen-lg-min) {
+                    right: calc(-100% + 336px);
+                }
+                border-right: 2px black solid;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background-color: color(secondary, base)
+            }   
+        }
+    }
+    .congresso {
+        position: relative;
+        .container {
+            z-index: 2;
+            position: relative;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .2;
+            z-index: 1;
+            content: '';
+            background: url(img/vector-3.png) center center / cover no-repeat;
+        }
+        &-list {
+            .item {
+                .title {
+                    @include toRem(font-size, 42);
+                    color: color(primary, base);
+                    text-shadow: 3px 3px 0 black; 
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .depoimentos {
+        background-color: color(primary, base);
+        position: relative;
+        .container {
+            z-index: 2;
+            position: relative;
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .2;
+            z-index: 1;
+            content: '';
+            background: url(img/vector-3.png) center center / cover no-repeat;
+        }
+        .slack-list {
+            padding: 0;
+        }
+        &-slide {
+            .item {
+                padding: 10px;
+                .inner {
+                    .title {
+                        @include toRem(font-size, 20);
+                        margin: 24px 0;
+                    }
+                    padding: 24px;
+                    background-color: white;
+                    border: 2px black solid;
+                    box-shadow: 8px 8px 0px 0px #000000;   
+                }
+            }
+        }
+    }
+}

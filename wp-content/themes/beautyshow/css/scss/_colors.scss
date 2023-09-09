@@ -1,0 +1,26 @@
+$palettes: (
+    primary: (base: #FE1979, light: #ffe2fe),
+    secondary: (base: #C5EE57),
+    yellow: (base: #F8D265),
+    blue: (base: #67B7D8),
+    purple: (base: #552CB8)
+);
+
+@function color($color,$tone){
+
+    @if map-has-key($palettes,$color){
+        $color: map-get($palettes,$color);
+
+            @if map-has-key($color,$tone){
+                $tone: map-get($color,$tone);
+                @return $tone;
+            }
+
+            @warn "unknown tone `#{$tone}` in color";
+            @return null;        
+    }
+
+    @warn "unknown color `#{$color}` in palette";
+    @return null;
+   
+}

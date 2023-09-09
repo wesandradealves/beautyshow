@@ -1,0 +1,80 @@
+.single-congresso {
+    .patrocinadores {
+        .container {
+            max-width: 960px;
+            position: relative;
+            z-index: 2;
+        }
+        position: relative;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            content: '';
+            background: url(img/vector-3.png) center center / cover no-repeat;
+        }
+        &-list {
+            .item {
+                width: 140px;
+                height: 80px;
+                .inner {
+                    background-color: white;
+                    border: 2px black solid;
+                    box-shadow: 8px 8px 0px 0px #000000; 
+                    height: 100%;  
+                    padding: 12px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .programacao {
+        background-color: color(primary, base);
+        position: relative;
+        .breakingnews {
+            z-index: 1;
+            position: relative;            
+        }
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            content: '';
+            background: url(img/vector-3.png) center center / cover no-repeat;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        &-slide {
+            .item {
+                padding-bottom: 8px;
+                .inner {
+                    height: 100%;
+                    padding: 24px;
+                    background-color: white;
+                    border: 2px black solid;
+                    box-shadow: 8px 8px 0px 0px #000000;      
+                    text-align: center;          
+                    .text {
+                        font-weight: 300;
+                    }   
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 234px;
+                    }     
+                }
+            }
+        }
+    }
+}
